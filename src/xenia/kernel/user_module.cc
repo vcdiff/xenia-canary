@@ -236,7 +236,7 @@ X_STATUS UserModule::LoadContinue() {
   if (ws_size && *ws_size) {
     workspace_size_ = std::max(ws_size->get(), uint32_t(256 * 1024));
   }
-  is_dll_module_ = !!(header->module_flags & XEX_MODULE_DLL_MODULE);
+  is_dll_module_ = true;
 
   // Setup the loader data entry
   auto ldr_data =

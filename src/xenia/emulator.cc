@@ -1467,7 +1467,7 @@ X_STATUS Emulator::CompleteLaunch(const std::filesystem::path& path,
     return result;
   }
 
-  result = kernel_state_->FinishLoadingUserModule(module);
+  result = kernel_state_->FinishLoadingUserModule(module, false);
   if (XFAILED(result)) {
     XELOGE("Failed to initialize user module {}", path);
     return result;
